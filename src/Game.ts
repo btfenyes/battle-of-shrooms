@@ -133,20 +133,22 @@ export default class Game {
   }
 
   checkPlayerMovement(){
-    if(this.keys.left.isDown || this.keys.leftA.isDown){
-      this.player.moveLeft();
-    }
-    if(this.keys.right.isDown || this.keys.rightD.isDown){
-      this.player.moveRight();
-    }
-    if(this.keys.up.isDown || this.keys.upW.isDown){
-      this.player.moveUp();
-    }
-    if(this.keys.down.isDown || this.keys.downS.isDown){
-      this.player.moveDown();
-    }
-    if(this.keys.space.isDown){
-      this.shouldSpawnProjectile = true;
+    if(!this.player.dead){
+      if(this.keys.left.isDown || this.keys.leftA.isDown){
+        this.player.moveLeft();
+      }
+      if(this.keys.right.isDown || this.keys.rightD.isDown){
+        this.player.moveRight();
+      }
+      if(this.keys.up.isDown || this.keys.upW.isDown){
+        this.player.moveUp();
+      }
+      if(this.keys.down.isDown || this.keys.downS.isDown){
+        this.player.moveDown();
+      }
+      if(this.keys.space.isDown){
+        this.shouldSpawnProjectile = true;
+      }
     }
   }
 
