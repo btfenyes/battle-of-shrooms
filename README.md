@@ -1,4 +1,4 @@
-# battle-of-shrooms
+# battle-of-shroomworld
 Demo shooter game
 
 Installation:
