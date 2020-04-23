@@ -4,6 +4,7 @@ import Player from './Player';
 import Enemy from './Enemy';
 import keyboard from './keyboard';
 import Projectile from './Projectile';
+import GameOverText from './GameOverText';
 import * as constants from './constants';
 
 export default class Game {
@@ -122,6 +123,7 @@ export default class Game {
       if(this.hitTestRectangle(enemy, this.player) && !this.player.dead){
         enemy.explode();
         this.player.explode();
+        new GameOverText('GAME OVER', this.stage);
       }
       this.projectiles.forEach(projectile => {
         if(this.hitTestRectangle(enemy, projectile)){
