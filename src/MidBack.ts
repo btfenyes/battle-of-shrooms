@@ -5,7 +5,7 @@ export default class MidBack extends PIXI.TilingSprite {
   viewportX: number = 0;
 
   constructor(){
-    super(PIXI.Texture.from('../assets/mid-back.png'), 800, 1024);
+    super(PIXI.Texture.from('../dist/assets/mid-back.png'), 800, 1024);
     this.position.x = 0;
     this.position.y = 155;
     this.tilePosition.x = 0;

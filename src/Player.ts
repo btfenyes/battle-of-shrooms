@@ -7,7 +7,7 @@ export default class Player extends PIXI.Sprite {
   public dead: Boolean  = false;
 
   constructor(private stage: PIXI.Container){
-    super(PIXI.Texture.from('../assets/player-ship-2.png'));
+    super(PIXI.Texture.from('../dist/assets/player-ship-2.png'));
     this.position.x = 20;
     this.width = 100;
     this.height = 45;

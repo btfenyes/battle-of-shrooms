@@ -8,7 +8,7 @@ export default class Enemy extends PIXI.Sprite {
   private dirChangeSnapshot: number = 0;
   
   constructor(private stage: PIXI.Container){
-    super(PIXI.Texture.from('../assets/enemy-1.png'));
+    super(PIXI.Texture.from('../dist/assets/enemy-1.png'));
     this.width = 75;
     this.height = 60;
     this.position.x = 800;

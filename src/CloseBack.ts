@@ -5,7 +5,7 @@ export default class CloseBack extends PIXI.TilingSprite {
   viewportX: number = 0;
 
   constructor(){
-    super(PIXI.Texture.from('../assets/close-back.png'), 800, 600);
+    super(PIXI.Texture.from('../dist/assets/close-back.png'), 800, 600);
     this.position.x = 0;
     this.position.y = 320;
     this.tilePosition.x = 0;

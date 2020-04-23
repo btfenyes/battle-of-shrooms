@@ -5,7 +5,7 @@ export default class FarBack extends PIXI.TilingSprite {
   viewportX: number = 0;
 
   constructor(){
-    super(PIXI.Texture.from('../assets/far-back.png'), 800, 600);
+    super(PIXI.Texture.from('../dist/assets/far-back.png'), 800, 600);
     this.position.x = 0;
     this.position.y = 0;
     this.tilePosition.x = 0;

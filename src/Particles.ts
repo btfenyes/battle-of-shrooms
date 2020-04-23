@@ -14,7 +14,7 @@ export default class Particles extends PIXI.ParticleContainer {
     });
 
     for(let i = 0; i < 16; i++){      
-      const sprite = (PIXI.Sprite.from('../assets/particle.png'));
+      const sprite = (PIXI.Sprite.from('../dist/assets/particle.png'));
       sprite.x = ship.x;
       sprite.y = ship.y;
       sprite.width = 10;
