@@ -45,8 +45,8 @@ export default class Game {
     const canvas = document.querySelector('canvas') || undefined;
     this.renderer = new PIXI.Renderer({
       view: canvas,
-      width: 800,
-      height: 600
+      width: constants.VIEW_WIDTH,
+      height: constants.VIEW_HEIGHT
     });
 
     switch (this.difficulty) {
@@ -153,7 +153,6 @@ export default class Game {
       }
     }
   }
-
   
   checkPlayerState(){
     if(this.player.dead){
@@ -184,11 +183,6 @@ export default class Game {
     this.shouldScrollLevel = false;
     setTimeout(() => {
       this.ticker.stop();
-
-      const container = document.getElementById('container')!;
-      const buttonContainer = document.getElementById('button-container')!;
-      const gameOneButton = document.getElementById('game-1')!;
-      const canvas = document.getElementById('canvas')!
       this.resetGameState();
     }, 3000);
   }

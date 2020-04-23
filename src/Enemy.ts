@@ -11,8 +11,8 @@ export default class Enemy extends PIXI.Sprite {
     super(PIXI.Texture.from('../dist/assets/enemy-1.png'));
     this.width = 75;
     this.height = 60;
-    this.position.x = 800;
-    this.position.y = Math.floor(Math.random() * (595 - this.height)) + 5;
+    this.position.x = constants.VIEW_WIDTH;
+    this.position.y = Math.floor(Math.random() * (constants.VIEW_HEIGHT - this.height));
 
     this.stage = stage;
     this.stage.addChild(this);
@@ -38,7 +38,7 @@ export default class Enemy extends PIXI.Sprite {
         }        
         break;
       case 2:
-        if(this.position.y < 600 - this.height){
+        if(this.position.y < constants.VIEW_HEIGHT - this.height){
           this.position.y += constants.ENEMY_MOVEMENT_UNIT;
         }
         break;

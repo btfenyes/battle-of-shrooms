@@ -1,5 +1,6 @@
 import Player from "./Player";
 import * as PIXI from 'pixi.js';
+import * as constants from './constants'; 
 
 export default class Projectile extends PIXI.Sprite {
   public dead: Boolean = false;
@@ -22,7 +23,7 @@ export default class Projectile extends PIXI.Sprite {
   }
 
   animate(){
-    this.position.x += 20;
+    this.position.x += constants.PROJECTILE_MOVEMENT_UNIT;
     if(this.positionCheck()){
       this.remove();
     }

@@ -18,33 +18,33 @@ export default class Player extends PIXI.Sprite {
 
   moveUp(){
     if(this.position.y > 5){
-      this.position.y -= constants.PLAYER_MOVEMENT_SPEED; 
+      this.position.y -= constants.PLAYER_MOVEMENT_UNIT; 
     } else {
       this.position.y = 5;
     }
   }
 
   moveDown(){
-    if(this.position.y + this.height < 595){
-      this.position.y += constants.PLAYER_MOVEMENT_SPEED; 
+    if(this.position.y + this.height < constants.VIEW_HEIGHT){
+      this.position.y += constants.PLAYER_MOVEMENT_UNIT; 
     } else {
-      this.position.y = 595 - this.height;
+      this.position.y = constants.VIEW_HEIGHT - this.height;
     }
   }
 
   moveLeft(){
     if(this.position.x > 5){
-      this.position.x -= constants.PLAYER_MOVEMENT_SPEED;
+      this.position.x -= constants.PLAYER_MOVEMENT_UNIT;
     } else {
       this.position.x = 5;
     }
   }
 
   moveRight(){
-    if(this.position.x + this.width < 795){
-      this.position.x += constants.PLAYER_MOVEMENT_SPEED; 
+    if(this.position.x + this.width < constants.VIEW_WIDTH){
+      this.position.x += constants.PLAYER_MOVEMENT_UNIT; 
     } else {
-      this.position.x = 795 - this.width;
+      this.position.x = constants.VIEW_WIDTH - this.width;
     }        
   }
 
