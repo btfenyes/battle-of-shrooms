@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Electrolize&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="style.css">
+  <title>Battle of Shroomworld</title>
+</head>
+<body>
+  <div class="container" id="container">
+    <img id="splash-logo" src="/assets/logo.png" alt="logo.png">
+    <div class="button-container" id="button-container">
+      <img id="logo-img" src="/assets/logo.png" alt="logo.png">
+      <button class="btn btn-game" id="game-1">GAME 1</button>
+      <p class="game-tooltip" id="game-1-tooltip">THE BASE GAME</p>        
+      <button class="btn btn-game" id="game-2">GAME 2</button>
+      <p class="game-tooltip" id="game-2-tooltip">THE SAME GAME, BUT MORE DIFFICULT</p>
+      <button class="btn btn-game" id="game-3">GAME 3</button>
+      <p class="game-tooltip" id="game-3-tooltip">EXTREMELY HARD</p>
+      <button class="btn btn-exit" id="exit">EXIT</button>
+      <img src="/assets/astronaut.svg" alt="astronaut.svg" id="astronaut-img">
+    </div>
+    <canvas id="canvas"></canvas>
+  </div>
+  <script src="dist/bundle.js"></script>
+</body>
+</html>

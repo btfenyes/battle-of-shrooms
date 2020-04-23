@@ -1,0 +1,121 @@
+.container {
+  width: 800px;
+  height: 600px;
+  margin: auto;
+  justify-content: center;
+  display: flex;
+  overflow: hidden;
+  z-index: 1;
+}
+
+#astronaut-img {
+  position: absolute;
+  width: 120px;
+  height: 200px;
+  
+  animation-duration: 40s, 15s;
+  animation-name: slide, rotate;
+  animation-timing-function: linear, linear;
+  animation-fill-mode: forwards, forwards;
+  animation-iteration-count: 1, infinite;
+
+  z-index: 2;
+}
+
+@keyframes slide {
+  from {
+    bottom: -200px;
+    left: -120px;
+  }
+  to {
+    bottom: 600px;
+    left: 800px;
+  }
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#logo-img {
+  margin-top: 15px;
+  width: 100%;
+  grid-column: 2;
+  z-index: 20;
+}
+
+#splash-logo {
+  margin: auto;
+  width: 500px;
+  transition: opacity 2s 2s;
+}
+
+#canvas {
+  margin: auto;
+}
+
+.button-container {
+  position: relative;
+  background: url('./assets/far-back.png');
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  z-index: 25;
+}
+
+.btn {
+  cursor: pointer;
+  border: 10px solid;
+  border-top-color: #219dc4;
+  border-left-color: #219dc4;
+  border-right-color: #076886;
+  border-bottom-color: #076886;
+  text-decoration: none;
+  border-radius: 10px;
+  height: 90px;
+  width: 300px;
+  font-size: 30px;
+  grid-column: 2;
+  align-self: center;
+  z-index: 25;
+  font-family: 'Righteous', cursive;
+  color: #2a2a2a;
+  font-family: 'Electrolize', sans-serif;
+}
+
+.btn-game {  
+  background: linear-gradient(#f4a300, #ffd140, #f4a300);
+}
+
+.btn-game:active {
+  background: linear-gradient(#d58e00, #f1cb54, #d58e00);
+}
+
+.btn-exit {
+  background: linear-gradient(#fd390f, #ff886f, #fd390f);
+}
+
+.btn-exit:active {
+  background: linear-gradient(#df3b18, #ec7e67,#df3b18);
+}
+
+.game-tooltip {
+  height: 90px;
+  margin: auto;
+  text-align: center;
+  align-self: center;
+  justify-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Bangers', cursive;
+  color: #f1cb54;
+  font-size: 22px;
+  font-weight: bolder;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #076886;
+  z-index: 30;
+}
